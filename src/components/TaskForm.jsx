@@ -1,10 +1,10 @@
 import { useState } from "react"
 
-function TaskForm({ onSubmit }) {
-    const [task, setTask] = useState({
-        title: '',
-        description: '',
-        status: 'pending'
+function TaskForm({initialTask = null,  onSubmit }) {
+    const [task, setTask] = useState(initialTask || {
+        title:'',
+        description:'',
+        status:'pending'
     })
 
     const handleChange = (e) => {
@@ -15,33 +15,22 @@ function TaskForm({ onSubmit }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(task);
-        // 清空表单
-        setTask({
-            title: '',
-            description: '',
-            status: 'pending'
-        });
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <input 
-                type="text" 
-                name="title" 
-                value={task.title} 
-                onChange={handleChange} 
-                placeholder="Task title" 
-                required
-            />
-            <textarea 
-                name="description" 
-                value={task.description} 
-                onChange={handleChange} 
-                placeholder="Task description" 
-            />
-            <button type="submit">
-                Add Task
+            <input type = "text" name = "title" value = {task.title} onChange = {handleChange} placeholder="title" required/>
+            <textarea name = "description" value = {task.description} onChange = {handleChange} placeholder="description" />
+            {initialTask && (
+                <select name = "status" value={task.status} onChange={handleChange}>
+                    <option value="pending">pending</option>
+                    <option value="completed">completed</option>
+                </select>
+            )}
+            <button type = "submit">
+                {initialTask ? 'Update Task' : 'Add Task'}
             </button>
+            
         </form>
     );
 }
