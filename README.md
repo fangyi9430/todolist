@@ -1,70 +1,100 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This is a single-page application (SPA) that allows users to:
+- Create, read, update, and delete tasks
+- Mark tasks as completed or pending
+- View detailed information about each task
+- Persist data locally using browser localStorage
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technology Stack
+- React 18
+- React Router v6
+- JavaScript (ES6+)
+- CSS3
+- localStorage API
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (version 14.0 or higher)
+- npm (comes with Node.js)
+- Git
 
-### `npm run build`
+### Installation Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/fangyi9430/task-manager.git
+   cd task-manager
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+4. **Open in browser**
+   - The application will automatically open at `http://localhost:3000`
+   - If it doesn't open automatically, navigate to the URL manually
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development Mode
+```bash
+npm start
+```
+- Runs on `http://localhost:3000`
+- Hot reloading enabled
+- Error messages displayed in console
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Production Build
+```bash
+npm run build
+```
+- Creates optimized production build in `build/` folder
+- Ready for deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage Guide
 
-### Code Splitting
+### Adding a Task
+1. Click "Add New Task" button on home page
+2. Enter task title (required) and description
+3. Click "Add Task" to save
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Editing a Task
+1. Click on task title to view details
+2. Click "Edit Task" button
+3. Modify information and update status if needed
+4. Click "Update Task" to save changes
 
-### Analyzing the Bundle Size
+### Managing Task Status
+- Click "Mark Complete" to mark as done
+- Click "Mark Pending" to mark as incomplete
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Deleting a Task
+- Click "Delete" button on any task
+- Task is permanently removed
 
-### Making a Progressive Web App
+## Browser Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub: [@fangyi9430](https://github.com/fangyi9430)
