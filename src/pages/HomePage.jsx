@@ -4,6 +4,7 @@ import TaskList from '../components/TaskList';
 
 function HomePage({ tasks, addTask, updateTask, deleteTask }) {
   const [showForm, setShowForm] = useState(false);
+  const [editingTaskId, setEditingTaskId] = useState(null);
 
   const handleAddTask = (newTask) => {
     addTask(newTask);
@@ -18,6 +19,11 @@ function HomePage({ tasks, addTask, updateTask, deleteTask }) {
         status: task.status === 'completed' ? 'pending' : 'completed'
       });
     }
+  };
+
+  const handleEditTask = (updatedTask) => {
+    updateTask(updatedTask);
+    setEditingTaskId(null);
   };
 
   return (
@@ -42,6 +48,10 @@ function HomePage({ tasks, addTask, updateTask, deleteTask }) {
         tasks={tasks} 
         onToggleStatus={handleToggleStatus}
         onDelete={deleteTask}
+        onUpdate={handleEditTask}
+        editingTaskId={editingTaskId}
+        onEditStart={setEditingTaskId}
+        onEditCancel={() => setEditingTaskId(null)}
       />
     </div>
   );

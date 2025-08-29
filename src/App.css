@@ -18,14 +18,15 @@ body {
 }
 
 .header {
-  background-color: #27ae60;
-  color: white;
+  background-color: transparent;
+  color: #333;
   padding: 0.75rem;
+  text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header h1 a {
-  color: white;
+  color: #333;
   text-decoration: none;
 }
 
@@ -118,6 +119,11 @@ button {
   color: white;
 }
 
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
 /* Task List */
 .task-list {
   display: grid;
@@ -170,6 +176,14 @@ button {
 .task-info p {
   color: #666;
   font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+  max-height: 4.2em; /* 3 lines * 1.4 line-height */
 }
 
 .task-status {
@@ -188,6 +202,14 @@ button {
   width: 100%;
 }
 
+.task-edit-form {
+  width: 100%;
+}
+
+.task-edit-form form {
+  margin-bottom: 0.5rem;
+}
+
 /* Task Detail */
 .task-detail {
   background: white;
@@ -204,6 +226,8 @@ button {
 .task-description {
   margin-bottom: 0.75rem;
   line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .task-detail .task-status {
