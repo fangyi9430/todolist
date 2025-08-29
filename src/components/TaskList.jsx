@@ -8,11 +8,13 @@ function TaskList({ tasks, onToggleStatus, onDelete }) {
       ) : (
         tasks.map(task => (
           <div key={task.id} className={`task-item ${task.status}`}>
-            <div className="task-content">
-              <h3>
-                <Link to={`/task/${task.id}`}>{task.title}</Link>
-              </h3>
-              <p>{task.description}</p>
+            <div className="task-header">
+              <div className="task-info">
+                <h3>
+                  <Link to={`/task/${task.id}`}>{task.title}</Link>
+                </h3>
+                <p>{task.description}</p>
+              </div>
               <span className="task-status">{task.status}</span>
             </div>
             <div className="task-actions">

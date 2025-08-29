@@ -1,8 +1,8 @@
 export const mockTasks = [
   {
     id: 1,
-    title: "finish report.",
-    description: "friday.",
+    title: "good good sleep.",
+    description: "sleep 10pm.",
     status: "pending"
   },
   {
@@ -13,8 +13,8 @@ export const mockTasks = [
   },
   {
     id: 3,
-    title: "grocery.",
-    description: "milk.",
+    title: "movie",
+    description: "mission.",
     status: "pending"
   }
 ];
